@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.msile.train.livedemo.ui.view.ChatInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#66000000"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:id="@+id/like_iv"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/live_like" />
+
+        <ImageView
+            android:id="@+id/small_iv"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@id/like_iv"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/live_small" />
+
+        <TextView
+            android:id="@+id/edit_bg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/small_iv"
+            android:background="@drawable/live_activity_edit_bg"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="快来和主播互动吧" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/send_tv"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:text="发送"
+        android:textColor="#FF5073"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/top_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#b4e0e0e0" />
+
+    <EditText
+        android:id="@+id/chat_etv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:hint="快来和主播互动吧"
+        android:maxLength="30"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#333333"
+        android:textColorHint="#66010101"
+        android:textSize="15sp"
+        android:visibility="invisible" />
+
+</me.msile.train.livedemo.ui.view.ChatInputLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 可以画背景的TextView -->
+    <declare-styleable name="ShapeTextView">
+        <attr name="radiusT" format="dimension"/>
+        <attr name="bottomLeftRadiusT" format="dimension"/>
+        <attr name="bottomRightRadiusT" format="dimension"/>
+        <attr name="topLeftRadiusT" format="dimension"/>
+        <attr name="topRightRadiusT" format="dimension"/>
+        <attr name="solidColorT" format="color"/>
+        <attr name="strokeWidthT" format="dimension"/>
+        <attr name="strokeColorT" format="color"/>
+        <attr name="dashWidthT" format="dimension"/>
+        <attr name="dashGapT" format="dimension"/>
+        <attr name="arrowLocationT" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="top" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+        <attr name="arrowWidthT" format="dimension"/>
+        <attr name="arrowHeightT" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="MaterialProgressBar">
+        <attr name="matProg_progressIndeterminate" format="boolean"/>
+        <attr name="matProg_barColor" format="color"/>
+        <attr name="matProg_rimColor" format="color"/>
+        <attr name="matProg_rimWidth" format="dimension"/>
+        <attr name="matProg_spinSpeed" format="float"/>
+        <attr name="matProg_barSpinCycleTime" format="integer"/>
+        <attr name="matProg_circleRadius" format="dimension"/>
+        <attr name="matProg_fillRadius" format="boolean"/>
+        <attr name="matProg_barWidth" format="dimension"/>
+        <attr name="matProg_linearProgress" format="boolean"/>
+    </declare-styleable>
+</resources>

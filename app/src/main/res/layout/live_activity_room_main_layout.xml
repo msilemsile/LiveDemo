@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.msile.train.livedemo.ui.view.KeyboardFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 固定布局不受键盘弹出限制 视频内容区 -->
+    <me.msile.train.livedemo.ui.view.LiveFixedSizeFrameLayout
+        android:id="@+id/live_fixed_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 滑动view -->
+    <me.msile.train.livedemo.ui.view.LiveTransOffsetView
+        android:id="@+id/live_trans_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 其他非视频层 顶部头像\消息列表\点赞等 -->
+    <me.msile.train.livedemo.ui.view.LiveFixedSizeRelativeLayout
+        android:id="@+id/title_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/anchor_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="90dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/live_activity_anchor_bg"
+            android:paddingBottom="3.5dp"
+            android:paddingLeft="3.5dp"
+            android:paddingRight="12dp"
+            android:paddingTop="3.5dp">
+
+            <ImageView
+                android:id="@+id/anchor_avatar"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/anchor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/anchor_avatar"
+                android:maxLines="1"
+                android:paddingTop="1dp"
+                android:text="msile"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/people_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/anchor_avatar"
+                android:maxLines="1"
+                android:paddingBottom="2dp"
+                android:text="666"
+                android:textColor="#b4ffffff"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <me.msile.train.livedemo.ui.view.ShapeTextView
+            android:id="@+id/like_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/anchor_rl"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@mipmap/live_title_heart"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="666"
+            android:textColor="#b4ffffff"
+            android:textSize="12sp"
+            app:radiusT="10dp"
+            app:solidColorT="#33000000"
+            app:strokeColorT="#33ffffff"
+            app:strokeWidthT="0.5dp" />
+
+        <!-- 点赞漂浮心 -->
+        <me.msile.train.livedemo.ui.view.HeartFloatView
+            android:id="@+id/heart_float"
+            android:layout_width="105dp"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp" />
+
+        <!-- 消息列表 -->
+        <me.msile.train.livedemo.ui.view.LiveMessageRecyclerView
+            android:id="@+id/chat_message_rv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="105dp" />
+
+    </me.msile.train.livedemo.ui.view.LiveFixedSizeRelativeLayout>
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/live_close" />
+
+    <!-- 底部输入框 -->
+    <include
+        android:id="@+id/chat_input_layout"
+        layout="@layout/live_chat_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom" />
+
+</me.msile.train.livedemo.ui.view.KeyboardFrameLayout>
