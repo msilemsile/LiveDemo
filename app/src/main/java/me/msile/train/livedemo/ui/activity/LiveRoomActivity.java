@@ -2,29 +2,30 @@ package me.msile.train.livedemo.ui.activity;
 
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import me.msile.train.livedemo.LiveDemoApplication;
 import me.msile.train.livedemo.R;
-import me.msile.train.livedemo.ui.adapter.LiveChatMessageAdapter;
 import me.msile.train.livedemo.manager.LiveFloatViewManager;
-import me.msile.train.livedemo.utils.floatpermission.FloatWindowUtils;
 import me.msile.train.livedemo.model.LiveChatMessage;
-import me.msile.train.livedemo.utils.DisplayUtils;
+import me.msile.train.livedemo.ui.adapter.LiveChatMessageAdapter;
 import me.msile.train.livedemo.ui.view.ChatInputLayout;
 import me.msile.train.livedemo.ui.view.HeartFloatView;
 import me.msile.train.livedemo.ui.view.KeyboardFrameLayout;
 import me.msile.train.livedemo.ui.view.LiveFixedSizeFrameLayout;
 import me.msile.train.livedemo.ui.view.LiveTransOffsetView;
 import me.msile.train.livedemo.ui.view.LiveVideoView;
+import me.msile.train.livedemo.utils.DisplayUtils;
+import me.msile.train.livedemo.utils.floatpermission.FloatWindowUtils;
 
 /**
  * 直播间
@@ -32,7 +33,7 @@ import me.msile.train.livedemo.ui.view.LiveVideoView;
 
 public class LiveRoomActivity extends AppCompatActivity implements ChatInputLayout.OnSendMessageListener {
 
-    public static final String LIVE_TEST_ADDRESS = "rtmp://live.hkstv.hk.lxdns.com/live/hks";
+    public static final String LIVE_TEST_ADDRESS = "rtmp://58.200.131.2:1935/livetv/hunantv";
 
     private KeyboardFrameLayout mRootFl;
     private LiveFixedSizeFrameLayout mFixedSizeLayout;
